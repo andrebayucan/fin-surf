@@ -1,0 +1,31 @@
+.intro-box {
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.exit-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.exit-btn {
+    aspect-ratio: 1.27 / 1;
+    width: 30px;
+    background-image: url("./exit-button.jpg");
+    background-size: cover;
+}
+
+.exit-btn:hover {
+    cursor: pointer;
+}
+
+.intro-text {
+    margin: 0px 30px 0px 30px;
+}

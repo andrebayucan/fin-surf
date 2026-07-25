@@ -1,7 +1,6 @@
 :root {
   --text: #ffffff;
-  --text-h: #10101f;
-  --bg: rgb(8, 20, 46);
+  --bg: rgb(11, 20, 41);
   --code-bg: #f4f3ec;
   --accent: #aa3bff;
   --accent-bg: rgba(170, 59, 255, 0.1);
@@ -10,8 +9,8 @@
   --shadow:
     rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
 
-  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --sans: Helvetica, Arial, sans-serif;
+  --heading: Helvetica, Arial, sans-serif;
   --mono: ui-monospace, Consolas, monospace;
 
   font: 18px/145% var(--sans);
@@ -61,13 +60,20 @@ body {
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
+  background-image: linear-gradient(rgb(10, 114, 138), rgb(8, 6, 33) 45%);
+}
+
+* {
+  box-sizing: border-box;
 }
 
 h1,
-h2 {
+h2,
+h3 {
+  line-height: 118%;
   font-family: var(--heading);
   font-weight: 500;
-  color: var(--text-h);
+  color: inherit;
 }
 
 h1 {
@@ -75,19 +81,29 @@ h1 {
   letter-spacing: -1.68px;
   margin: 32px 0;
   @media (max-width: 1024px) {
-    font-size: 36px;
-    margin: 20px 0;
+    font-size: 50px;
   }
 }
-h2 {
+h2, .input-form textarea {
   font-size: 24px;
-  line-height: 118%;
   letter-spacing: -0.24px;
   margin: 0 0 8px;
   @media (max-width: 1024px) {
     font-size: 20px;
   }
 }
+h3 {
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: -0.40px;
+  margin: 16px 0;
+  @media (max-width: 1024px) {
+    font-size: 25px;
+    margin: 20px 0;
+  }
+  color: inherit;
+}
+
 p {
   margin: 0;
 }
@@ -97,7 +113,7 @@ code,
   font-family: var(--mono);
   display: inline-flex;
   border-radius: 4px;
-  color: var(--text-h);
+  color: inherit;
 }
 
 code {
@@ -105,4 +121,51 @@ code {
   line-height: 135%;
   padding: 4px 8px;
   background: var(--code-bg);
+}
+
+.site-name {
+    color: rgb(183, 255, 14);
+}
+
+.glass1, .glass2 {
+  border: solid;
+  backdrop-filter: blur(80px);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.glass1 {
+  border-radius: 7px;
+  border-width: 4px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.glass2 {
+  border-radius: 5px;
+  border-width: 3px;
+  background-color: rgba(192, 190, 209, 0.2);
+}
+
+a {
+  font-size: inherit;
+  color: inherit;
+  text-decoration: none;
+}
+
+.small-btn {
+  padding: 10px;
+  font-size: 24px;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  border-radius: 4px;
+  background-color: white;
+}
+
+.small-btn:hover {
+  cursor: pointer;
+  background-color: rgb(162, 246, 249);
+}
+
+.small-btn img,
+.delete-btn img {
+  max-height: 100%;
 }
