@@ -7,7 +7,9 @@ const IntroBox = ({hideFunction}) => {
     return (
         <div className="intro-box glass1">
             <div className="exit-container">
-                <button className="exit-btn" onClick={hideFunction}/>
+                <button className="exit-btn" onClick={hideFunction}>
+                    <img src="/exit-button.jpg"/>
+                </button>
             </div>
             <div className="intro-text">
                 <h1>Welcome to <span className="site-name">Fin Surf</span>!</h1>

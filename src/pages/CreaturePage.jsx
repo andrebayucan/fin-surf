@@ -67,7 +67,7 @@ const CreaturePage = () => {
     return (
         <div className="creature-page glass1">
             <h3>{fullDetails.name}</h3>
-            <h2>Records: {fullDetails.records}</h2>
+            <h2>{fullDetails.records ? `Records: ${fullDetails.records}` : ""}</h2>
             <br />
 
             {fullDetails.taxon ?

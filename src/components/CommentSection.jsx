@@ -57,6 +57,21 @@ const CommentSection = ({id}) => {
         fetchComments().catch(console.error)
     }, [])
 
+    const scrollTo = (hashId) => {
+            const target = document.querySelector(hashId)
+    
+            if (target != null)
+                target.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start",
+                })
+        }
+    
+    useEffect(() => {
+        if (location.hash != "" && document.readyState == "complete")
+            scrollTo(location.hash)
+    }, [currentComments])
+
     return (
         <div id="comments" className="comment-section">
             <form className="comment-form-container">

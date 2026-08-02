@@ -17,10 +17,15 @@
 }
 
 .exit-btn {
-    aspect-ratio: 1.27 / 1;
-    width: 30px;
-    background-image: url("./exit-button.jpg");
-    background-size: cover;
+    max-width: 30px;
+    object-fit: cover;
+    padding: 0;
+    line-height: 0;
+    background-color: transparent;
+}
+
+.exit-btn img {
+    max-width: 100%;
 }
 
 .exit-btn:hover {

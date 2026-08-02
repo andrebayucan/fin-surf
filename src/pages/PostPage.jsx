@@ -22,27 +22,6 @@ const PostPage = () => {
         comments: []
     })
 
-    const scrollTo = (id) => {
-        const target = document.querySelector(id)
-        console.log("a")
-
-        if (target != null)
-            target.scrollIntoView({
-                behavior: "smooth",
-                block: "start",
-                inline: "center"
-            })
-    }
-
-    document.onreadystatechange = () => {
-        if (location.hash != ""
-            && (document.readyState == "interactive" ||
-                document.readyState == "complete"
-            )
-            )
-                scrollTo(location.hash)
-    }
-
     useEffect(() => {
         const fetchDetails = async () => {
             const {data} = await supabase
