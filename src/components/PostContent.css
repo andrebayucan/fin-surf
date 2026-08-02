@@ -1,8 +1,9 @@
 .post-content {
     width: 100%;
     min-height: 300px;
-    max-height: 400px;
+    max-height: 500px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: flex-start;
     align-items: flex-start;
     gap: 30px;
@@ -13,12 +14,6 @@
     overflow: hidden;
     overflow-wrap: break-word;
     text-align: left;
-}
-
-.thumbnail {
-    aspect-ratio: 1 / 1;
-    height: 230px;
-    flex-shrink: 0;
 }
 
 .post-details {
@@ -47,9 +42,12 @@
 }
 
 .description-container {
+    display: -webkit-box;
     width: 100%;
-    max-height: 100px;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
     overflow: hidden;
-    white-space: pre-wrap;
+    text-overflow: ellipsis;
     overflow-wrap: break-word;
+    white-space: pre-wrap;
 }

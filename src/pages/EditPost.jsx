@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router'
 import { supabase } from '../Client'
+import { getCurrentDate } from '../Helpers'
 import PostInputForm from '../components/PostInputForm'
 import DeleteBtn from '../components/DeleteBtn'
 
@@ -10,7 +11,10 @@ const EditPost = () => {
 
     const [post, setPost] = useState({
         category: "",
-        title: "",
+        title: {
+            image: null,
+            name: ""
+        },
         species: [],
         thumbnail: "",
         content: "",

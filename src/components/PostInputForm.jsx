@@ -1,14 +1,10 @@
 import { useState, useEffect } from 'react'
-import { supabase } from '../Client'
 import './PostInputForm.css'
-
-/* Parts of postDetails:
-    Category, title, species, thumbnail, content
-*/
 
 const PostInputForm = ({postDetails, setPostDetails, databaseFunction, submitText}) => {
 
-    const [selectedCategory, setSelectedCategory] = useState(null)
+    const [imageOption, setImageOption] = useState(null)
+    const [selectedThumbnail, setSelectedThumbnail] = useState(null)
 
     const handleChange = (event) => {
         const {name, value} = event.target
@@ -20,9 +16,20 @@ const PostInputForm = ({postDetails, setPostDetails, databaseFunction, submitTex
         })
     }
 
-    const handleCategoryChange = (event) => {
-        setSelectedCategory(event.target.value)
+    const handleImageOptionChange = (event) => {
+        setImageOption(event.target.value)
         handleChange(event)
+    }
+
+    const handleThumbnailChange = (event) => {
+        const {name, value} = event.target
+        setSelectedThumbnail(value)
+        setPostDetails((prevState) => {
+            return {
+                ...prevState,
+                [name]:{image: value, name:"Custom image"}
+            }
+        })
     }
 
     const finalPost = async (event) => {
@@ -32,68 +39,107 @@ const PostInputForm = ({postDetails, setPostDetails, databaseFunction, submitTex
             return
         }
         
-        await databaseFunction({category: postDetails.category, title: postDetails.title, species: postDetails.species, thumbnail: postDetails.thumbnail, content: postDetails.content, password: postDetails.password})
+        await databaseFunction({
+            category: postDetails.category,
+            title: postDetails.title,
+            species: postDetails.species,
+            thumbnail: postDetails.thumbnail,
+            content: postDetails.content,
+            password: postDetails.password})
         
         window.location = "/"
     }
 
     useEffect(() => {
-        setSelectedCategory(postDetails.category)
-    }, [postDetails.category])
+        setImageOption("Current")
+    }, [])
 
     return (
         <form className="input-form glass1">
-
             <div className="option-container">
-                <label htmlFor="category">
-                    <h3>Category</h3>
+                <label htmlFor="thumbnail-input">
+                    <h3>Thumbnail</h3>
                 </label>
-
-                <li className="category-list" key="categories">
+                <li className="category-list" id="thumbnail-input">
                     <div className="category-option">
                         <input
-                        id="Post"
-                        name="category"
-                        type="radio"
-                        value="Post"
-                        onChange={handleCategoryChange}
-                        checked={selectedCategory == "Post"}
+                            id="current-option"
+                            name="Current"
+                            type="radio"
+                            value="Current"
+                            onChange={handleImageOptionChange}
+                            checked={imageOption == "Current"}
                         />
-                        <label htmlFor="Post">
-                            <h2>Post</h2>
+                        <label htmlFor="current-option">
+                            <h2>Current</h2>
                         </label>
                     </div>
                     <div className="category-option">
                         <input
-                        id="Sighting"
-                        name="category"
-                        type="radio"
-                        value="Sighting"
-                        onChange={handleCategoryChange}
-                        checked={selectedCategory == "Sighting"}
+                            id="custom-option"
+                            name="Custom"
+                            type="radio"
+                            value="Custom"
+                            onChange={handleImageOptionChange}
+                            checked={imageOption == "Custom"}
                         />
-                        <label htmlFor="Sighting">
-                            <h2>Sighting</h2>
+                        <label htmlFor="custom-option">
+                            <h2>Custom</h2>
                         </label>
                     </div>
                 </li>
             </div>
 
+            {imageOption == "Custom" ? 
+            <textarea
+                className="title-input"
+                id="thumbnail"
+                name="thumbnail"
+                required
+                placeholder="Custom URL..."
+                value={postDetails.thumbnail.image}
+                onChange={handleThumbnailChange} />
+            :
+            ""
+            }
+
             <div className="option-container">
-                <label htmlFor="title">
+                <label htmlFor="title-input">
                     <h3>Title</h3>
                 </label>
-                <textarea className="title-input" id="title" name="title" maxLength="80" required placeholder="Type here..." value={postDetails.title} onChange={handleChange} />
+                <textarea
+                    className="title-input"
+                    id="title-input"
+                    name="title"
+                    maxLength="80"
+                    required placeholder="Type here..."
+                    value={postDetails.title}
+                    onChange={handleChange}
+                />
             </div>
 
             <div className="option-container">
-                <label htmlFor="content">
+                <label htmlFor="content-input">
                     <h3>Content</h3>
                 </label>
-                <textarea className="content-input" id="content" name="content" maxLength="600" required value={postDetails.content} placeholder="Type here..." onChange={handleChange} />
+                <textarea
+                    className="content-input"
+                    id="content-input"
+                    name="content"
+                    maxLength="600"
+                    required
+                    value={postDetails.content}
+                    placeholder="Type here..."
+                    onChange={handleChange}
+                />
             </div>
 
-            <input className="small-btn" type="submit" value={submitText} onClick={finalPost}/>
+            <input
+                className="small-btn"
+                type="submit"
+                value={submitText}
+                onClick={finalPost}
+            />
         </form>
     )
 }

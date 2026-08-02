@@ -1,0 +1,93 @@
+import { useState, useEffect, useRef } from 'react'
+import { useParams } from 'react-router'
+import { supabase } from '../Client'
+import { translateDate } from '../Helpers'
+import LinkBtn from '../components/LinkBtn'
+import Image from '../components/Image'
+import CommentSection from '../components/CommentSection'
+import './PostPage.css'
+
+const PostPage = () => {
+
+    const {id} = useParams()
+    const [post, setPost] = useState({
+        created_at: "",
+        edited_at: "",
+        category: "",
+        title: "",
+        species: [],
+        thumbnail: {},
+        content: "",
+        password: "",
+        comments: []
+    })
+
+    const scrollTo = (id) => {
+        const target = document.querySelector(id)
+        console.log("a")
+
+        if (target != null)
+            target.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+                inline: "center"
+            })
+    }
+
+    document.onreadystatechange = () => {
+        if (location.hash != ""
+            && (document.readyState == "interactive" ||
+                document.readyState == "complete"
+            )
+            )
+                scrollTo(location.hash)
+    }
+
+    useEffect(() => {
+        const fetchDetails = async () => {
+            const {data} = await supabase
+            .from("Posts")
+            .select()
+            .eq("id", id)
+            .single()
+
+            setPost({
+                created_at: translateDate(data.created_at),
+                edited_at: translateDate(data.edited_at),
+                category: data.category,
+                title: data.title,
+                species: data.species,
+                thumbnail: data.thumbnail,
+                content: data.content,
+                password: data.password,
+                comments: data.comments
+            })
+        }
+
+        fetchDetails().catch(console.error)
+    }, [])
+
+    return (
+        <div className="post-page glass3">
+            <div className="page-top">
+                <div className="page-dates">
+                    <p>Creation Date: {post.created_at}</p>
+                    {post.edited_at ? <p>Last Edited: {post.edited_at} </p> : ""}
+                </div>
+                <LinkBtn path={`/edit/${id}`} image="/padlock.png" alt="A lock icon." text="Edit"/>
+            </div>
+            <div className="page-species">
+                
+            </div>
+            <div className="page-content">
+                <Image src={post.thumbnail.image} alt={post.thumbnail.name} />
+                <h1>{post.title}</h1>
+                <h2>{post.content}</h2>
+            </div>
+
+            <CommentSection id={id} />
+        </div>
+    )
+}
+
+export default PostPage

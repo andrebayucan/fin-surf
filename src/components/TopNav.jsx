@@ -11,8 +11,8 @@ const TopNav = () => {
                 <Link to="/">
                     <h3>Home</h3>
                 </Link>
-                <Link to="/create">
-                    <h3>Create Post</h3>
+                <Link to="/creatures">
+                    <h3>Sea Life</h3>
                 </Link>
                 <Link to="/about">
                     <h3>About</h3>

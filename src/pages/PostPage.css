@@ -1,0 +1,36 @@
+.post-page {
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    margin-top: 30px;
+    padding: 20px;
+}
+
+.page-top {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.page-dates {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.page-species {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-content {
+    width: 100%;
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
+}

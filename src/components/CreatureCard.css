@@ -1,0 +1,13 @@
+.creature-card {
+    width: 500px;
+    min-width: 200px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+    color: black;
+    background-color: white;
+    border-radius: 5px;
+}

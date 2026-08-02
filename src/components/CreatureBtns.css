@@ -1,4 +1,4 @@
-.post-btns {
+.creature-btns {
     width: 100%;
     height: auto;
     display: flex;
@@ -6,8 +6,9 @@
     justify-content: flex-start;
     align-items: center;
     gap: 15px;
-    padding: 10px;
-    border-radius: 5px;
-    border-color: rgba(255, 255, 255, 0.5);
     overflow: hidden;
+}
+
+.creature-btns .small-btn {
+    background-color: rgb(74, 174, 197);
 }

@@ -1,0 +1,39 @@
+.comment-section,
+.comment-form-container,
+.comments {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.comment-section {
+    gap: 20px;
+    margin-top: 30px;
+    border-radius: 5px;
+}
+
+.comment-form-container {
+    width: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.comment-input {
+    width: 100%;
+    min-height: 100px;
+}
+
+.comment-form-container textarea {
+    width: 100%;
+    border-radius: 8px;
+    font-size: 1em;
+    font-family: var(--heading);
+    color: black;
+    background-color: rgb(246, 246, 246);
+    field-sizing: content;
+}
+
+.comments {
+    gap: 20px;
+}

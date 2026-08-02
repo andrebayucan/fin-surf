@@ -9,9 +9,10 @@
 
 .delete-btn:hover {
   cursor: pointer;
-  background-color: rgb(162, 246, 249);
+  background-color: rgb(225, 133, 133);
+  color: black;
 }
 
-.small-btn img {
+.delete-btn img {
   max-height: 100%;
 }

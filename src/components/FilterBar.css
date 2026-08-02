@@ -1,0 +1,73 @@
+.filters {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-end;
+    gap: 50px;
+    padding: 40px;
+}
+
+.range-bar-container {
+    width: 180px;
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px;
+}
+
+input[type="range"].range-bar {
+    accent-color: rgb(255, 255, 255);
+}
+
+.input-box {
+    width: 300px;
+    height: 40px;
+}
+
+input[type="text"].input-box {
+    background-color: rgb(246, 246, 246);
+    color: rgb(0, 0, 0);
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+input.input-box::placeholder {
+    color: rgb(98, 98, 98);
+}
+
+.page-input {
+    width: 100px;
+}
+
+.sort-type-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.sort-option {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 5px;
+}
+
+.sort-type-list input[type="radio"] {
+    aspect-ratio: 1 / 1;
+    height: 2em;
+}
+
+.sort-type-list input[type="radio"]:hover {
+    cursor: pointer;
+}
+
+.filters select {
+    width: 140px;
+    background-color: rgb(246, 246, 246);
+    color: rgb(0, 0, 0);
+    border-radius: 6px;
+    padding: 10px;
+    font-size: 16px;
+    border-style: inset;
+    border-width: 2px;
+}

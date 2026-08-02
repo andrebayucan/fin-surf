@@ -6,8 +6,20 @@ import './Post.css'
 const Post = (props) => {
     return (
         <div className="post glass1">
-            <PostContent date={props.date} title={props.title} species={props.species} thumbnail={props.thumbnail} content={props.content} />
-            <PostBtns id={props.id} comments={props.comments} />
+            <PostContent
+                category={props.category}
+                date={props.date}
+                title={props.title}
+                species={props.species}
+                thumbnail={props.thumbnail}
+                content={props.content}
+                password={props.comments}
+            />
+            <PostBtns
+                id={props.id}
+                initialLikes={props.initialLikes}
+                comments={props.comments}
+            />
         </div>
     )
 }
