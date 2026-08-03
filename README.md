@@ -2,9 +2,9 @@
 
 Submitted by: **Andre Bayucan**
 
-This web app: **Fin Surf is a forum where users can create, edit, delete, read, upvote, and comment on posts about marine life. Using the public REST API provided by the Ocean Biodiversity Information System (OBIS), this website allows visitors to browse through and sort millions of marine life occurrences. Visitors can see an organism's scientific name, record date, taxonomic hierarchy, and that creature's number of occurrences in the OBIS database. **
+This web app: **Fin Surf is a forum where users can create, edit, delete, read, upvote, and comment on posts about marine life. Using the public REST API provided by the Ocean Biodiversity Information System (OBIS), this website allows visitors to browse through and sort millions of marine life occurrences. Visitors can see an organism's scientific name, record date, taxonomic hierarchy, and that creature's number of occurrences in the OBIS database.**
 
-Time spent: **20++** hours spent in total
+Time spent: **20+** hours spent in total
 
 ## Required Features
 
