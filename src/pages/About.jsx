@@ -8,9 +8,9 @@ const About = () => {
     }, [])
 
     return (
-        <div className="">
+        <h1>
             Thanks for surfin' around Fin Surf!
-        </div>
+        </h1>
     )
 }
 
