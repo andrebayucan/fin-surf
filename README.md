@@ -54,14 +54,14 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<video src="https://github.com/user-attachments/assets/d404a285-24ec-4325-b931-aaf874668a40" autoplay loop muted playsinline></video>
+<video src="https://github.com/user-attachments/assets/c896789d-f0f3-4bbc-96d8-5f1bd3914caf" autoplay loop muted playsinline></video>
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with QuickTime Player  
 
 ## Notes
 
-The OBIS API proved to be a challenge to work with due to the limited number of query options I could use. If I wanted to allow the user to page through creature occurrence results in the Sea Life tab, I would need to use the "after" parameter, which would specify which occurrence id the query should begin fetching results after. At first, I thought of turning this into a pagination system, where I would get the id of the last occurrence displayed on the page and use that for the after parameter. After mulling this idea over, however, I realized that it would become difficult to implement if a user wanted to skip ahead more than one page, requiring multiple queries to get the last id. Instead, I simply used the query size and the page / offset number to calculate the retrieval range, letting me to implement pagination in a single query. I did need to more queries to get images for the organisms, however, as the OBIS API did not provide any media. The iNaturalist API &mdash which I had used in previous projects &mdash had images for many organisms, so I passed in the scientific names of animals in queries to get image URLs.
+The OBIS API proved to be a challenge to work with due to the limited number of query options I could use. If I wanted to allow the user to page through creature occurrence results in the Sea Life tab, I would need to use the "after" parameter, which would specify which occurrence id the query should begin fetching results after. At first, I thought of turning this into a pagination system, where I would get the id of the last occurrence displayed on the page and use that for the after parameter. After mulling this idea over, however, I realized that it would become difficult to implement if a user wanted to skip ahead more than one page, requiring multiple queries to get the last id. Instead, I simply used the query size and the page / offset number to calculate the retrieval range, letting me to implement pagination in a single query. I did need to more queries to get images for the organisms, however, as the OBIS API did not provide any media. The iNaturalist API -- which I had used in previous projects -- had images for many organisms, so I passed in the scientific names of animals in queries to get image URLs.
 
 ## License
 
