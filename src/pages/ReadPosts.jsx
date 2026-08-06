@@ -3,10 +3,11 @@ import { useSearchParams } from 'react-router'
 import { supabase } from '../Client'
 import Post from '../components/Post'
 import FilterBar from '../components/FilterBar'
+import IntroBox from '../components/IntroBox'
 import './ReadPosts.css'
 
 const ReadPosts = () => {
-
+    
     const [params] = useSearchParams()
     const page = params.get("page")
     const size = params.get("size")
@@ -14,6 +15,7 @@ const ReadPosts = () => {
     const sortType = params.get("sort_type")
     const orderBy = params.get("order_by")
 
+    const [acknowledged, setAcknowledged] = useState(false)
     const [posts, setPosts] = useState(null)
     const [filters, setFilters] = useState({
         results: Number(size) || 10,
@@ -23,6 +25,11 @@ const ReadPosts = () => {
         orderBy: orderBy || "descending",
         sortType: sortType || "date"
     })
+    
+    const acknowledgeIntro = () => {
+        localStorage.setItem("finsurf_sawintro", true)
+        setAcknowledged(true)
+    }
 
     const stringToBool = (str) => {
         if (str == "ascending")
@@ -52,11 +59,14 @@ const ReadPosts = () => {
             setPosts(data)
         }
 
+        if (localStorage.getItem("finsurf_sawintro") === "true")
+            setAcknowledged(true)
         fetchPosts().catch(console.error)
     }, [filters])
 
     return (
         <>
+            {acknowledged ? "" : <IntroBox hideFunction={acknowledgeIntro} />}
             <FilterBar initialFilters={filters} />
             <div className="posts-container">
                 {posts && posts.length > 0 ? 

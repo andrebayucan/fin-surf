@@ -3,6 +3,7 @@ import { useParams } from 'react-router'
 import { formatNumber, capitalizeFirst } from '../Helpers'
 import FilterBar from '../components/FilterBar'
 import Image from "../components/Image"
+import LinkBtn from '../components/LinkBtn'
 import './CreaturePage.css'
 
 const CreaturePage = () => {
@@ -65,11 +66,11 @@ const CreaturePage = () => {
     }, [])
 
     return (
-        <div className="creature-page glass1">
+        <div className="creature-page glass1 large-padding">
+            <LinkBtn path={`/create/${id}`} text="Create Post" />
             <h3>{fullDetails.name}</h3>
             <h2>{fullDetails.records ? `Records: ${fullDetails.records}` : ""}</h2>
             <br />
-
             {fullDetails.taxon ?
                 Object.entries(fullDetails.taxon).map(([rank, value]) => {
                     if (value)
@@ -80,6 +81,7 @@ const CreaturePage = () => {
                 :
                 ""
             }
+            
             <br />
             
             {fullDetails.image ?

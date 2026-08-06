@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useRoutes } from 'react-router'
 import TopNav from './components/TopNav'
-import IntroBox from './components/IntroBox'
 import ReadPosts from './pages/ReadPosts'
 import CreatePost from './pages/CreatePost'
 import EditPost from './pages/EditPost'
@@ -13,13 +12,6 @@ import NotFound from './pages/NotFound'
 import './Layout.css'
 
 function Layout() {
-
-  const [acknowledged, setAcknowledged] = useState(false)
-
-  const acknowledgeIntro = () => {
-    localStorage.setItem("finsurf_sawintro", true)
-    setAcknowledged(true)
-  }
 
   let element = useRoutes([
     {
@@ -66,17 +58,13 @@ function Layout() {
     }
   ])
 
-  useEffect(() => {
-    if (localStorage.getItem("finsurf_sawintro") === "true")
-      setAcknowledged(true)
-  }, [])
-
   return (
-    <div className="whole-page">
-      <TopNav></TopNav>
-      {acknowledged ? "" : <IntroBox hideFunction={acknowledgeIntro} />}
-      {element}
-    </div>
+    <>
+       <TopNav></TopNav>
+      <div className="page-content">
+        {element}
+      </div>
+    </>
   )
 }
 

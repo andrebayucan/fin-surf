@@ -7,7 +7,7 @@ import './PostBtns.css'
 const PostBtns = (props) => {
 
     return (
-        <div className="post-btns">
+        <div className="post-btns small-padding">
             <LinkBtn path={`edit/${props.id}`} image="/padlock.png" alt="A lock icon." text="Edit"/>
             <LinkBtn path={`post/${props.id}`} image="/info.svg" alt="An info icon." text="View"/>
             <LikeBtn id={props.id} initialLikes={props.initialLikes} />

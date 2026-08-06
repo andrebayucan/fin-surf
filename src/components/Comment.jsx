@@ -4,7 +4,7 @@ import './Comment.css'
 
 const Comment = ({content, date}) => {
     return (
-        <div className="comment">
+        <div className="comment medium-padding">
             <p>{translateDate(date)}</p>
             <p>{content}</p>
         </div>

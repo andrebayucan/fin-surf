@@ -68,7 +68,7 @@ const FilterBar = ({initialFilters, baseURL, creatureBrowser=false}) => {
     }, [])
 
     return (
-        <div className="filters glass2">
+        <div className="filters glass1 large-padding">
                 
             <div className="sort-container">
                 <label htmlFor="page-input">
@@ -85,7 +85,7 @@ const FilterBar = ({initialFilters, baseURL, creatureBrowser=false}) => {
                 />
             </div>
 
-            <div className="range-bar-container">
+            <div className="range-bar-container small-padding">
                 <label htmlFor="results-input">
                     <p>{creatureBrowser ? "Query Size:"  : "Results per Page:" } {numResults}</p>
                 </label>
@@ -116,7 +116,7 @@ const FilterBar = ({initialFilters, baseURL, creatureBrowser=false}) => {
                 <label htmlFor="sort-input">
                     <p>Sorting</p>
                 </label>
-                <select name="sort" id="sort-input" value={sortType} onChange={handleDropdownChange}>
+                <select className="small-padding" name="sort" id="sort-input" value={sortType} onChange={handleDropdownChange}>
                     <option value="date">Date</option>
                     {creatureBrowser ? "" : <option value="likes">Likes</option>}
                 </select>

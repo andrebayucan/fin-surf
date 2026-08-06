@@ -4,7 +4,7 @@ import './PostContent.css'
 
 const PostContent = (props) => {
     return (
-        <div className="post-content">
+        <div className="post-content large-padding">
             <Image src={props.thumbnail.image} alt={props.thumbnail.name} className="square" />
             <div className="post-details">
                 <div className="basic-details">

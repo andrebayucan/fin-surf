@@ -13,7 +13,7 @@ const DeleteBtn = ({id}) => {
     }
 
     return (
-        <button className="delete-btn" onClick={deleteDatabasePost}>
+        <button className="delete-btn small-padding" onClick={deleteDatabasePost}>
             <img src="/trash.svg" alt="A trash can icon." />
             Delete
         </button>

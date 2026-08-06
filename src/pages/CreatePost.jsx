@@ -41,7 +41,9 @@ const CreatePost = () => {
             setPost({
                 category: "Sighting",
                 title: creature.scientificName,
-                species: [id],
+                species: [{
+                    id: id, name: creature.scientificName
+                }],
                 thumbnail: {
                     image: creaturePhoto,
                     name: creature.scientificName

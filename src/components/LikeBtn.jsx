@@ -19,9 +19,13 @@ const LikeBtn = ({id, initialLikes}) => {
         setLikeCount((likeCount) => likeCount + 1)
     }
 
+    useEffect(() => {
+        setLikeCount(initialLikes)
+    }, [initialLikes])
+
     return (
         <button className="small-btn" onClick={likePost}>
-            <img src="heart.svg" alt="A heart representing a like button." />
+            <img src="/heart.svg" alt="A heart representing a like button." />
             {shortenNumber(likeCount)}
         </button>
     )

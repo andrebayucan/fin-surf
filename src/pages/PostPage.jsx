@@ -3,6 +3,7 @@ import { useParams } from 'react-router'
 import { supabase } from '../Client'
 import { translateDate } from '../Helpers'
 import LinkBtn from '../components/LinkBtn'
+import LikeBtn from '../components/LikeBtn'
 import Image from '../components/Image'
 import CommentSection from '../components/CommentSection'
 import './PostPage.css'
@@ -10,6 +11,7 @@ import './PostPage.css'
 const PostPage = () => {
 
     const {id} = useParams()
+    const [comments, setComments] = useState([])
     const [post, setPost] = useState({
         created_at: "",
         edited_at: "",
@@ -19,7 +21,8 @@ const PostPage = () => {
         thumbnail: {},
         content: "",
         password: "",
-        comments: []
+        comments: [],
+        likes: 0
     })
 
     useEffect(() => {
@@ -39,21 +42,26 @@ const PostPage = () => {
                 thumbnail: data.thumbnail,
                 content: data.content,
                 password: data.password,
-                comments: data.comments
+                comments: data.comments,
+                likes: data.likes
             })
+
         }
 
         fetchDetails().catch(console.error)
-    }, [])
+    }, [id])
 
     return (
-        <div className="post-page glass3">
+        <div className="post-page glass1 medium-padding">
             <div className="page-top">
                 <div className="page-dates">
                     <p>Creation Date: {post.created_at}</p>
                     {post.edited_at ? <p>Last Edited: {post.edited_at} </p> : ""}
                 </div>
-                <LinkBtn path={`/edit/${id}`} image="/padlock.png" alt="A lock icon." text="Edit"/>
+                <div className="top-btns">
+                    <LikeBtn id={id} initialLikes={post.likes} />
+                    <LinkBtn path={`/edit/${id}`} image="/padlock.png" alt="A lock icon." text="Edit"/>
+                </div>
             </div>
             <div className="page-species">
                 

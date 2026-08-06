@@ -9,6 +9,7 @@ const CommentSection = ({id}) => {
 
     const [commentInput, setCommentInput] = useState("")
     const [currentComments, setCurrentComments] = useState([])
+    const [loaded, setLoaded] = useState(false)
 
     const handleCommentChange = (event) => {
         setCommentInput(event.target.value)
@@ -22,17 +23,17 @@ const CommentSection = ({id}) => {
         .single()
 
         if (data && data.comments)
-            return data.comments
+            return [...data.comments].sort((a, b) => b.created_at.localeCompare(a.created_at)) 
         else
             return []
     }
 
-    const postComment = async () => {
+    const postComment = async (event) => {
         event.preventDefault()
         
         const updatedComments = [
-            ...(await getComments()),
-            {text: commentInput, created_at: getCurrentDate()}
+            {text: commentInput, created_at: getCurrentDate()},
+            ...(await getComments())
         ]
 
         const {data} = await supabase
@@ -40,18 +41,12 @@ const CommentSection = ({id}) => {
         .update({comments: updatedComments})
         .eq("id", id)
 
-        window.location.reload()
+        setCurrentComments(updatedComments)
     }
 
     useEffect(() => {
         const fetchComments = async () => {
-            const {data} = await supabase
-            .from("Posts")
-            .select("comments")
-            .eq("id", id)
-
-            if (data || data[0].comments.length > 0)
-                setCurrentComments(data[0].comments)
+            setCurrentComments(await getComments())
         }
 
         fetchComments().catch(console.error)
@@ -68,13 +63,15 @@ const CommentSection = ({id}) => {
         }
     
     useEffect(() => {
-        if (location.hash != "" && document.readyState == "complete")
+        if (!loaded && location.hash != "" && document.readyState == "complete") {
             scrollTo(location.hash)
+            setLoaded(true)
+        }
     }, [currentComments])
 
     return (
         <div id="comments" className="comment-section">
-            <form className="comment-form-container">
+            <form className="comment-form-container" onSubmit={postComment}>
                 <label htmlFor="comment-input">
                     <h3>Write a Comment</h3>
                 </label>
@@ -92,7 +89,6 @@ const CommentSection = ({id}) => {
                     className="small-btn"
                     type="submit"
                     value="Comment"
-                    onClick={postComment}
                 />
             </form>
             <div className="comments">

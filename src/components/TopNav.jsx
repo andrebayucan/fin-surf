@@ -9,7 +9,7 @@ const TopNav = () => {
             </Link>
             <div className="nav-links">
                 <Link to="/">
-                    <h3>Home</h3>
+                    <h3>Forum</h3>
                 </Link>
                 <Link to="/creatures">
                     <h3>Sea Life</h3>

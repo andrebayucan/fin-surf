@@ -5,7 +5,7 @@ import './CreatureCard.css'
 
 const CreatureCard = (props) => {
     return (
-        <div className="creature-card">
+        <div className="creature-card glass1 medium-padding">
             <CreatureContent name={props.name} image={props.image} date={props.date}/>
             <CreatureBtns id={props.id} name={props.name} image={props.image} />
         </div>
