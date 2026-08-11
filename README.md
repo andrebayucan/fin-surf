@@ -30,7 +30,10 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot](/site-logo.png)](https://finsurf.netlify.app/)
+<a href="https://finsurf.netlify.app/">
+  <img src="public/site-logo.PNG" alt="Logo" width="80" height="80">
+</a>
+
 [Site Link](https://finsurf.netlify.app/)
 
 Fin Surf is a forum where users can create, edit, delete, read, upvote, and comment on posts about marine life. Using the public REST API provided by the Ocean Biodiversity Information System (OBIS), this website allows visitors to browse through and sort millions of marine life occurrences. Visitors can see an organism's scientific name, record time, taxonomic hierarchy, and that creature's number of occurrences in the OBIS database.
@@ -172,10 +175,6 @@ Please update your npm tool.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 <!-- License -->
 ## License
@@ -214,3 +213,9 @@ This project was the final website I created for CodePath's WEB102: Intermediate
 * [iNaturalist](https://www.inaturalist.org/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+<!-- MARKDOWN LINKS & IMAGES -->
+[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
+[React-url]: https://reactjs.org/
