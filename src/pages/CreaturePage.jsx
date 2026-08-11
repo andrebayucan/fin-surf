@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router'
-import { formatNumber, capitalizeFirst } from '../Helpers'
+import { formatNumber, capitalizeFirst, translateDate } from '../Helpers'
 import FilterBar from '../components/FilterBar'
 import Image from "../components/Image"
 import LinkBtn from '../components/LinkBtn'
@@ -48,7 +48,7 @@ const CreaturePage = () => {
             setFullDetails({
                 name: creature.scientificName,
                 image: creaturePhoto,
-                date: creature.date,
+                date: creature.eventDate,
                 records: creatureRecords,
                 taxon: {
                     kingdom: creature.kingdom,
@@ -69,6 +69,7 @@ const CreaturePage = () => {
         <div className="creature-page glass large-padding">
             <LinkBtn path={`/create/${id}`} text="Create Post" />
             <h3>{fullDetails.name}</h3>
+            <h2>{fullDetails.date ? `Date: ${translateDate(fullDetails.date)}` : ""}</h2>
             <h2>{fullDetails.records ? `Records: ${fullDetails.records}` : ""}</h2>
             <br />
             {fullDetails.taxon ?
@@ -88,7 +89,6 @@ const CreaturePage = () => {
             <Image src={fullDetails.image} alt={fullDetails.name} />
             :
             ""}
-            
             
         </div>
     )
