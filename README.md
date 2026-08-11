@@ -151,22 +151,22 @@ Please update your npm tool.
 
 ### Forum posts and filtering
 
-<video src="/site-videos/forum-demo.mov" autoplay loop muted playsinline></video>
+<video src="site-videos/forum-demo.mov" autoplay loop muted playsinline></video>
 ### View a post page
 
-<video src="/site-videos/post-page.mov" autoplay loop muted playsinline></video>
+<video src="site-videos/post-page.mov" autoplay loop muted playsinline></video>
 
 ### Sea life and filtering
 
-<video src="/site-videos/sea-life-demo.mov" autoplay loop muted playsinline></video>
+<video src="site-videos/sea-life-demo.mov" autoplay loop muted playsinline></video>
 
 ### Sea life sorting
 
-<video src="/site-videos/sort-life.mov" autoplay loop muted playsinline></video>
+<video src="site-videos/sort-life.mov" autoplay loop muted playsinline></video>
 
 ### Post creation
 
-<video src="/site-videos/post-creation-demo.mov" autoplay loop muted playsinline></video>
+<video src="site-videos/post-creation-demo.mov" autoplay loop muted playsinline></video>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
