@@ -127,7 +127,7 @@ code {
     color: rgb(183, 255, 14);
 }
 
-.glass1 {
+.glass {
   border: 2px solid rgba(255, 255, 255, 0.5);
   border-radius: 7px;
   backdrop-filter: blur(80px);

@@ -5,7 +5,7 @@ import './Post.css'
 
 const Post = (props) => {
     return (
-        <div className="post glass1">
+        <div className="post glass">
             <PostContent
                 category={props.category}
                 date={props.date}

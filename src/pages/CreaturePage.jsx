@@ -66,7 +66,7 @@ const CreaturePage = () => {
     }, [])
 
     return (
-        <div className="creature-page glass1 large-padding">
+        <div className="creature-page glass large-padding">
             <LinkBtn path={`/create/${id}`} text="Create Post" />
             <h3>{fullDetails.name}</h3>
             <h2>{fullDetails.records ? `Records: ${fullDetails.records}` : ""}</h2>

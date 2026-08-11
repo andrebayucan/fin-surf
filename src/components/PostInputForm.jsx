@@ -55,7 +55,7 @@ const PostInputForm = ({postDetails, setPostDetails, databaseFunction, submitTex
     }, [])
 
     return (
-        <form className="input-form glass1">
+        <form className="input-form glass">
             <div className="option-container">
                 <label htmlFor="thumbnail-input">
                     <h3>Thumbnail</h3>

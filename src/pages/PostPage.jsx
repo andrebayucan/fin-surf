@@ -52,7 +52,7 @@ const PostPage = () => {
     }, [id])
 
     return (
-        <div className="post-page glass1 medium-padding">
+        <div className="post-page glass medium-padding">
             <div className="page-top">
                 <div className="page-dates">
                     <p>Creation Date: {post.created_at}</p>

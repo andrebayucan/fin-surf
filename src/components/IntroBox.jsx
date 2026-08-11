@@ -5,7 +5,7 @@ import './IntroBox.css'
 const IntroBox = ({hideFunction}) => {
 
     return (
-        <div className="intro-box glass1 medium-padding">
+        <div className="intro-box glass medium-padding">
             <div className="exit-container">
                 <button className="exit-btn" onClick={hideFunction}>
                     <img src="/exit-button.jpg"/>

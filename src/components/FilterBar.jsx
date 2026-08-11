@@ -68,7 +68,7 @@ const FilterBar = ({initialFilters, baseURL, creatureBrowser=false}) => {
     }, [])
 
     return (
-        <div className="filters glass1 large-padding">
+        <div className="filters glass large-padding">
                 
             <div className="sort-container">
                 <label htmlFor="page-input">
