@@ -151,14 +151,16 @@ Please update your npm tool.
 
 ### Forum posts and filtering
 
-<video src="site-videos/forum-demo.mov" autoplay loop muted playsinline></video>
+<video src="https://github.com/user-attachments/assets/a7131675-5ecf-4cc5-99ed-b9b89037a4d8" autoplay loop muted playsinline></video>
+
+![Forum Demo](./site-videos/forum-demo.gif)
 ### View a post page
 
 <video src="site-videos/post-page.mov" autoplay loop muted playsinline></video>
 
 ### Sea life and filtering
 
-<video src="site-videos/sea-life-demo.mov" autoplay loop muted playsinline></video>
+<video src="https://github.com/user-attachments/assets/1f770a34-3e10-49c6-a703-aea9b02c4766" autoplay loop muted playsinline></video>
 
 ### Sea life sorting
 
