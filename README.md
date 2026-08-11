@@ -30,13 +30,17 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Site Logo][site-logo]](https://finsurf.netlify.app/)
+<a href="https://finsurf.netlify.app/">
+  <img src="public/site-logo.PNG" alt="Logo" width="400" height="400">
+</a>
 
 https://finsurf.netlify.app/
 
 Fin Surf is a forum where users can create, edit, delete, read, upvote, and comment on posts about marine life. Using the public REST API provided by the Ocean Biodiversity Information System (OBIS), this website allows visitors to browse through and sort millions of marine life occurrences. Visitors can see an organism's scientific name, record time, taxonomic hierarchy, and that creature's number of occurrences in the OBIS database.
 
 The following is a list of included features:
+
+![Forum feed screenshot](public/site-screenshots/forum-tab.png)
 - **A create form that allows the user to create posts**
   - Form requires users to add a post title
   - If provided by the iNaturalist API, an organism image is automatically assigned
@@ -215,6 +219,5 @@ This project was the final website I created for CodePath's WEB102: Intermediate
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
-[site-logo]: public/site-logo.PNG
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/
