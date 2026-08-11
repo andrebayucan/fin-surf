@@ -30,7 +30,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][/site-logo.png]](https://finsurf.netlify.app/)
+[![Product Name Screen Shot](/site-logo.png)](https://finsurf.netlify.app/)
 [Site Link](https://finsurf.netlify.app/)
 
 Fin Surf is a forum where users can create, edit, delete, read, upvote, and comment on posts about marine life. Using the public REST API provided by the Ocean Biodiversity Information System (OBIS), this website allows visitors to browse through and sort millions of marine life occurrences. Visitors can see an organism's scientific name, record time, taxonomic hierarchy, and that creature's number of occurrences in the OBIS database.
@@ -153,10 +153,9 @@ Please update your npm tool.
 
 <video src="https://github.com/user-attachments/assets/a7131675-5ecf-4cc5-99ed-b9b89037a4d8" autoplay loop muted playsinline></video>
 
-![Forum Demo](./site-videos/forum-demo.gif)
 ### View a post page
 
-<video src="site-videos/post-page.mov" autoplay loop muted playsinline></video>
+<video src="https://github.com/user-attachments/assets/00d8aa58-d28e-43e3-a004-d4fb5964bd53" autoplay loop muted playsinline></video>
 
 ### Sea life and filtering
 
@@ -164,11 +163,11 @@ Please update your npm tool.
 
 ### Sea life sorting
 
-<video src="site-videos/sort-life.mov" autoplay loop muted playsinline></video>
+<video src="https://github.com/user-attachments/assets/68e4b618-dcda-4501-bfa2-9cfb7505ffb7" autoplay loop muted playsinline></video>
 
 ### Post creation
 
-<video src="site-videos/post-creation-demo.mov" autoplay loop muted playsinline></video>
+<video src="https://github.com/user-attachments/assets/013c2e34-1daf-43d4-a874-14e02b943787" autoplay loop muted playsinline></video>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
