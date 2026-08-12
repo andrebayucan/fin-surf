@@ -40,15 +40,18 @@ Fin Surf is a forum where users can create, edit, delete, read, upvote, and comm
 
 The following is a list of included features:
 
-![Forum feed screenshot](public/site-screenshots/forum-tab.png)
+![Post creation screenshot](public/site-screenshots/post-creation.png)
 - **A create form that allows the user to create posts**
   - Form requires users to add a post title
   - If provided by the iNaturalist API, an organism image is automatically assigned
   - Optionally, users can:
     - Include additional textual content
     - Use a custom image added as an external image URL
-- Editing allows creatures 
 
+![Post details screenshot](public/site-screenshots/post-editing.png)
+- Editing allows creatures to be deleted as well
+
+![Forum feed screenshot](public/site-screenshots/forum-tab.png)
 - **A forum feed displaying previously created posts**
   - Each post on the posts feed shows the post's:
     - Image
@@ -59,18 +62,24 @@ The following is a list of included features:
     - View post button
     - Upvotes count and button
     - Comments button
-  - **Each created post has a separate post page when clicked**
-    - Additional information is shown, including:
-      - Creation time
-      - Time of most recent edit, if applicable
-      - Upvotes count and button
-      - Edit button
-      - Image
-      - Title
-      - Text Content 
-      - Comment Section
-        - Reading posted comments
-        - An input box to post new comments
+
+![Post details screenshot](public/site-screenshots/post-details.png)
+- **Each created post has a separate post page when clicked**
+  - Additional information is shown, including:
+    - Creation time
+    - Time of most recent edit, if applicable
+    - Upvotes count and button
+    - Edit button
+    - Image
+    - Title
+    - Text Content
+    - Comment Section
+
+![Post details screenshot](public/site-screenshots/comment-section.png)
+- In a comment section, users can:
+  - Reading posted comments
+  - An input box to post new comments
+
 - **Post Filtering**
   - Users can search by post title via an input box
   - Users can page through results via:
@@ -79,35 +88,39 @@ The following is a list of included features:
   - Choosing ascending or descending, users can sort posts by:
     - Creation time
     - Upvotes
-  - **A sea creature browser displaying records from the Ocean Biodiversity Information System API**
-    - Each creature card shows the creature's:
-      - Scientific name
-      - Record time
-      - View details button
-      - Create post button
-    - **Each created post has a separate post page when clicked**
-      - Additional information is shown, including:
-        - Create post button
-        - Record time
-        - Scientific name
-        - The number of total records of this organism in the database
-        - The taxonomy tree, including:
-          - Kingdom
-          - Phylum
-          - Class
-          - Order
-          - Family
-          - Genus
-          - Species
-        - Creature image
-  - **Sea Life Filtering**
-    - Users can search by creature name via an input box
-    - Users can change query results via:
-      - A range bar to specify how many creatures they would like to be included in the query
-      - Another input box to choose an offset of the query results
-        - For example: if a user chooses a query size of twenty and an offset number of three, the query will skip the first forty records and return the records from forty-one through sixty
-    - Choosing ascending or descending, users can sort posts by:
-      - Record time
+
+![Sea life browser screenshot](public/site-screenshots/sea-life-tab.png)
+- **A sea creature browser displaying records from the Ocean Biodiversity Information System API**
+  - Each creature card shows the creature's:
+    - Scientific name
+    - Record time
+    - View details button
+    - Create post button
+  
+![Creature details screenshot](public/site-screenshots/creature-details.png)
+- **Each creature record has a separate page when clicked**
+  - Additional information is shown, including:
+    - Create post button
+    - Record time
+    - Scientific name
+    - The number of total records of this organism in the database
+    - The taxonomy tree, including:
+      - Kingdom
+      - Phylum
+      - Class
+      - Order
+      - Family
+      - Genus
+      - Species
+    - Creature image
+- **Sea Life Filtering**
+  - Users can search by creature name via an input box
+  - Users can change query results via:
+    - A range bar to specify how many creatures they would like to be included in the query
+    - Another input box to choose an offset of the query results
+      - For example: if a user chooses a query size of twenty and an offset number of three, the query will skip the first forty records and return the records from forty-one through sixty
+  - Choosing ascending or descending, users can sort posts by:
+    - Record time
 
 ### Built With
 
