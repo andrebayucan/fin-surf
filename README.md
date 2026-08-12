@@ -216,10 +216,11 @@ Project Link: https://github.com/andrebayucan/fin-surf
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-This project was the final website I created for CodePath's WEB102: Intermediate Web Development course. I used the public REST APIs of the organizations below, linking their main websites.
+This project was the final website I created for CodePath's WEB102: Intermediate Web Development course. I used a database provided by Supabase, and I used the public REST APIs provided by the first two organizations below, linking their main websites.
 
 * [Ocean Biodiversity Information System](https://obis.org/)
 * [iNaturalist](https://www.inaturalist.org/)
+* [Supabase](https://supabase.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
