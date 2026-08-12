@@ -38,20 +38,23 @@ https://finsurf.netlify.app/
 
 Fin Surf is a forum where users can create, edit, delete, read, upvote, and comment on posts about marine life. Using the public REST API provided by the Ocean Biodiversity Information System (OBIS), this website allows visitors to browse through and sort millions of marine life occurrences. Visitors can see an organism's scientific name, record time, taxonomic hierarchy, and that creature's number of occurrences in the OBIS database.
 
-The following is a list of included features:
+### Built With
 
-![Post creation screenshot](public/site-screenshots/post-creation.png)
+This application was programmed with Javascript, CSS, and HTML in a React framework.
+* [![React][React.js]][React-url]
+
+### Features
+
 - **A create form that allows the user to create posts**
   - Form requires users to add a post title
   - If provided by the iNaturalist API, an organism image is automatically assigned
   - Optionally, users can:
     - Include additional textual content
     - Use a custom image added as an external image URL
+  - Editing allows creatures to be deleted as well
+![Post creation screenshot](public/site-screenshots/post-creation.png)
+![Post editing screenshot](public/site-screenshots/post-editing.png)
 
-![Post details screenshot](public/site-screenshots/post-editing.png)
-- Editing allows creatures to be deleted as well
-
-![Forum feed screenshot](public/site-screenshots/forum-tab.png)
 - **A forum feed displaying previously created posts**
   - Each post on the posts feed shows the post's:
     - Image
@@ -62,8 +65,14 @@ The following is a list of included features:
     - View post button
     - Upvotes count and button
     - Comments button
-
-![Post details screenshot](public/site-screenshots/post-details.png)
+- **Post Filtering**
+  - Users can search by post title via an input box
+  - Users can page through results via:
+    - A range bar to specify how many posts they would like to see per page
+    - Another input box to choose which page of results to view 
+  - Choosing ascending or descending, users can sort posts by:
+    - Creation time
+    - Upvotes
 - **Each created post has a separate post page when clicked**
   - Additional information is shown, including:
     - Creation time
@@ -74,30 +83,18 @@ The following is a list of included features:
     - Title
     - Text Content
     - Comment Section
+      - Reading posted comments
+      - An input box to post new comments
+![Forum feed screenshot](public/site-screenshots/forum-tab.png)
+![Post details screenshot](public/site-screenshots/post-details.png)
+![Comment section screenshot](public/site-screenshots/comments.png)
 
-![Post details screenshot](public/site-screenshots/comment-section.png)
-- In a comment section, users can:
-  - Reading posted comments
-  - An input box to post new comments
-
-- **Post Filtering**
-  - Users can search by post title via an input box
-  - Users can page through results via:
-    - A range bar to specify how many posts they would like to see per page
-    - Another input box to choose which page of results to view 
-  - Choosing ascending or descending, users can sort posts by:
-    - Creation time
-    - Upvotes
-
-![Sea life browser screenshot](public/site-screenshots/sea-life-tab.png)
 - **A sea creature browser displaying records from the Ocean Biodiversity Information System API**
   - Each creature card shows the creature's:
     - Scientific name
     - Record time
     - View details button
     - Create post button
-  
-![Creature details screenshot](public/site-screenshots/creature-details.png)
 - **Each creature record has a separate page when clicked**
   - Additional information is shown, including:
     - Create post button
@@ -121,11 +118,8 @@ The following is a list of included features:
       - For example: if a user chooses a query size of twenty and an offset number of three, the query will skip the first forty records and return the records from forty-one through sixty
   - Choosing ascending or descending, users can sort posts by:
     - Record time
-
-### Built With
-
-This application was programmed with Javascript, CSS, and HTML in a React framework.
-* [![React][React.js]][React-url]
+![Sea life browser screenshot](public/site-screenshots/sea-life-tab.png)
+![Creature details screenshot](public/site-screenshots/creature-details.png)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
