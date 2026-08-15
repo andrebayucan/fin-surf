@@ -163,23 +163,23 @@ Please update your npm tool.
 
 ### Forum posts and filtering
 
-<video src="https://github.com/user-attachments/assets/a7131675-5ecf-4cc5-99ed-b9b89037a4d8" autoplay loop muted playsinline></video>
+https://github.com/user-attachments/assets/4e1b9adc-83c2-4da7-9db6-3f2a0c796d76
 
 ### View a post page
 
-<video src="https://github.com/user-attachments/assets/00d8aa58-d28e-43e3-a004-d4fb5964bd53" autoplay loop muted playsinline></video>
+https://github.com/user-attachments/assets/08f0a251-60ee-4459-8383-d44839a09dd5
 
 ### Sea life and filtering
 
-<video src="https://github.com/user-attachments/assets/1f770a34-3e10-49c6-a703-aea9b02c4766" autoplay loop muted playsinline></video>
+https://github.com/user-attachments/assets/16f603ba-97c1-42a7-9ecf-6534d8aff7fb
 
 ### Sea life sorting
 
-<video src="https://github.com/user-attachments/assets/68e4b618-dcda-4501-bfa2-9cfb7505ffb7" autoplay loop muted playsinline></video>
+https://github.com/user-attachments/assets/a3dfcaa8-135b-47a4-9a65-6df88905fdac
 
 ### Post creation
 
-<video src="https://github.com/user-attachments/assets/013c2e34-1daf-43d4-a874-14e02b943787" autoplay loop muted playsinline></video>
+https://github.com/user-attachments/assets/65c9a171-631c-460b-86d6-85b31ee0d1d7
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
